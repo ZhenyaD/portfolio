@@ -1,53 +1,6 @@
 (function () {
   'use strict';
 
-  function sendPrompt(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(showToast).catch(function () {
-        fallbackCopy(text);
-      });
-    } else {
-      fallbackCopy(text);
-    }
-  }
-
-  function fallbackCopy(text) {
-    var textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.setAttribute('readonly', '');
-    textarea.style.position = 'absolute';
-    textarea.style.left = '-9999px';
-    document.body.appendChild(textarea);
-    textarea.select();
-    try {
-      document.execCommand('copy');
-      showToast();
-    } catch (err) {
-      showToast('Copy this prompt: ' + text);
-    }
-    document.body.removeChild(textarea);
-  }
-
-  var toastEl;
-  var toastTimer;
-
-  function showToast(message) {
-    if (!toastEl) {
-      toastEl = document.createElement('div');
-      toastEl.className = 'toast';
-      toastEl.setAttribute('role', 'status');
-      toastEl.setAttribute('aria-live', 'polite');
-      document.body.appendChild(toastEl);
-    }
-    toastEl.textContent =
-      message || 'Prompt copied — paste it into Claude to learn more about me.';
-    toastEl.classList.add('is-visible');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(function () {
-      toastEl.classList.remove('is-visible');
-    }, 3200);
-  }
-
   function initScrollReveal() {
     var prefersReduced =
       window.matchMedia &&
@@ -82,17 +35,6 @@
     targets.forEach(function (el) {
       observer.observe(el);
     });
-  }
-
-  window.sendPrompt = sendPrompt;
-
-  function initAskClaudeButton() {
-    var btn = document.getElementById('ask-claude-btn');
-    if (btn) {
-      btn.addEventListener('click', function () {
-        sendPrompt('Tell me more about Evgenii as a PM');
-      });
-    }
   }
 
   function initLightbox() {
@@ -182,7 +124,6 @@
 
   function init() {
     initScrollReveal();
-    initAskClaudeButton();
     initLightbox();
   }
 

@@ -657,33 +657,6 @@ body.lightbox-open {
   background: rgba(80, 75, 60, 0.4);
 }
 
-/* Toast for sendPrompt */
-.toast {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%) translateY(80px);
-  background: var(--color-background-elevated);
-  border: 0.5px solid var(--color-border-primary);
-  color: var(--color-text-primary);
-  font-size: 13px;
-  padding: 10px 16px;
-  border-radius: var(--border-radius-md);
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s var(--ease-out);
-  z-index: 100;
-  max-width: calc(100vw - 2rem);
-  text-align: center;
-}
-
-.toast.is-visible {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
 /* Mobile */
 @media (max-width: 720px) {
   .pf {
