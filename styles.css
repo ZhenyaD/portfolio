@@ -619,6 +619,10 @@ body.lightbox-open {
   margin-top: 1rem;
 }
 
+.ai-workflow-img + .ai-workflow-img {
+  margin-top: 1rem;
+}
+
 .ai-workflow-img img {
   width: 100%;
   display: block;
