@@ -492,6 +492,15 @@ body.lightbox-open {
   gap: 10px;
 }
 
+.tools-grid--workflow {
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 10px;
+}
+
+.tools-grid--workflow:last-of-type {
+  margin-bottom: 0;
+}
+
 .tool-card {
   background: var(--color-background-secondary);
   border: 0.5px solid var(--color-border-tertiary);
@@ -512,6 +521,7 @@ body.lightbox-open {
   justify-content: center;
   font-size: 15px;
   flex-shrink: 0;
+  color: var(--color-text-primary);
 }
 
 .tool-name {
@@ -661,6 +671,26 @@ body.lightbox-open {
   background: rgba(80, 75, 60, 0.4);
 }
 
+.tool-icon--fireflies {
+  background: rgba(140, 70, 30, 0.45);
+}
+
+.tool-icon--whispr {
+  background: rgba(90, 50, 120, 0.45);
+}
+
+.tool-icon--atlas {
+  background: rgba(30, 100, 90, 0.45);
+}
+
+.tool-icon--claude-design {
+  background: rgba(50, 90, 140, 0.45);
+}
+
+.tool-icon--figjam {
+  background: rgba(130, 90, 20, 0.45);
+}
+
 /* Mobile */
 @media (max-width: 720px) {
   .pf {
@@ -704,6 +734,10 @@ body.lightbox-open {
 
   .deliverables-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tools-grid--workflow {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .contact-card {
