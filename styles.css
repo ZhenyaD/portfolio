@@ -723,9 +723,26 @@ body.lightbox-open {
     grid-template-columns: 1fr;
   }
 
-  .tools-grid--workflow {
+  .tools-workflow {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
+
+  .tools-grid--workflow {
+    display: contents;
+  }
+
+  .tool-card--claude { order: 1; }
+  .tool-card--cursor { order: 2; }
+  .tool-card--fireflies { order: 3; }
+  .tool-card--whispr { order: 4; }
+  .tool-card--atlas { order: 5; }
+  .tool-card--claude-design { order: 6; }
+  .tool-card--figma { order: 7; }
+  .tool-card--figjam { order: 8; }
+  .tool-card--jira { order: 9; }
+  .tool-card--confluence { order: 10; }
 
   .contact-card {
     width: 100%;
