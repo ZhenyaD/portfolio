@@ -494,11 +494,12 @@ body.lightbox-open {
 
 .tools-grid--workflow {
   grid-template-columns: repeat(5, 1fr);
-  margin-bottom: 10px;
 }
 
-.tools-grid--workflow:last-of-type {
-  margin-bottom: 0;
+.tools-workflow {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .tool-card {
@@ -521,7 +522,13 @@ body.lightbox-open {
   justify-content: center;
   font-size: 15px;
   flex-shrink: 0;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
+  background: transparent;
+}
+
+.tools-grid--workflow .tool-icon {
+  color: var(--color-text-secondary);
+  background: transparent;
 }
 
 .tool-name {
@@ -651,44 +658,24 @@ body.lightbox-open {
 }
 
 /* Tool icon backgrounds — muted for dark theme */
-.tool-icon--claude {
+.tools-grid:not(.tools-grid--workflow) .tool-icon--claude {
   background: rgba(12, 68, 124, 0.4);
 }
 
-.tool-icon--cursor {
+.tools-grid:not(.tools-grid--workflow) .tool-icon--cursor {
   background: rgba(39, 80, 10, 0.4);
 }
 
-.tool-icon--figma {
+.tools-grid:not(.tools-grid--workflow) .tool-icon--figma {
   background: rgba(120, 60, 40, 0.4);
 }
 
-.tool-icon--jira {
+.tools-grid:not(.tools-grid--workflow) .tool-icon--jira {
   background: rgba(20, 80, 70, 0.4);
 }
 
-.tool-icon--confluence {
+.tools-grid:not(.tools-grid--workflow) .tool-icon--confluence {
   background: rgba(80, 75, 60, 0.4);
-}
-
-.tool-icon--fireflies {
-  background: rgba(140, 70, 30, 0.45);
-}
-
-.tool-icon--whispr {
-  background: rgba(90, 50, 120, 0.45);
-}
-
-.tool-icon--atlas {
-  background: rgba(30, 100, 90, 0.45);
-}
-
-.tool-icon--claude-design {
-  background: rgba(50, 90, 140, 0.45);
-}
-
-.tool-icon--figjam {
-  background: rgba(130, 90, 20, 0.45);
 }
 
 /* Mobile */
