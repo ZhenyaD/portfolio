@@ -380,9 +380,15 @@ body {
   pointer-events: none;
 }
 
+.deliverable-label-title {
+  display: block;
+}
+
 .deliverable-label .deliverable-link {
+  display: block;
   color: #a0a0a0;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   pointer-events: auto;
 }
 
