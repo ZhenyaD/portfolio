@@ -311,7 +311,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
   margin-top: 1rem;
-  align-items: stretch;
 }
 
 .deliverable-thumb {
@@ -333,7 +332,6 @@ body {
 
 .deliverable-thumb--extended {
   cursor: default;
-  height: 100%;
 }
 
 .deliverable-thumb--extended:has(.deliverable-thumb-hit:hover) {
@@ -382,31 +380,14 @@ body {
   pointer-events: none;
 }
 
-.deliverable-thumb--extended .deliverable-label {
-  padding-bottom: 0;
-}
-
-.deliverable-thumb--extended .deliverable-link,
-.deliverable-thumb--extended .deliverable-link-spacer {
-  display: block;
-  font-size: 11px;
-  line-height: 1.4;
-  padding: 4px 8px 6px;
-  background: var(--color-background-secondary);
-}
-
-.deliverable-thumb--extended .deliverable-link {
+.deliverable-label .deliverable-link {
   color: #a0a0a0;
   text-decoration: none;
+  pointer-events: auto;
 }
 
-.deliverable-thumb--extended .deliverable-link:hover {
+.deliverable-label .deliverable-link:hover {
   color: var(--color-text-secondary);
-}
-
-.deliverable-link-spacer {
-  visibility: hidden;
-  pointer-events: none;
 }
 
 /* Lightbox */
