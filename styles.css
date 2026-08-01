@@ -355,21 +355,33 @@ body {
   pointer-events: none;
 }
 
-.deliverable-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.deliverable-card {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: var(--color-background-secondary);
 }
 
-.deliverable-link {
+.deliverable-card .deliverable-thumb--preview {
+  border: 0;
+  border-radius: 0;
+}
+
+.deliverable-card .deliverable-label {
+  padding-bottom: 0;
+}
+
+.deliverable-card .deliverable-link {
+  display: block;
   font-size: 11px;
-  color: var(--color-text-secondary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: #a0a0a0;
+  padding: 4px 8px 6px;
+  background: var(--color-background-secondary);
+  text-decoration: none;
 }
 
-.deliverable-link:hover {
-  color: var(--color-text-primary);
+.deliverable-card .deliverable-link:hover {
+  color: var(--color-text-secondary);
 }
 
 /* Lightbox */

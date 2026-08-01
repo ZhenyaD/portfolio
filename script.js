@@ -87,7 +87,10 @@
     triggers.forEach(function (trigger) {
       trigger.addEventListener('click', function () {
         var img = trigger.querySelector('img');
-        var label = trigger.querySelector('.deliverable-label');
+        var card = trigger.closest('.deliverable-card');
+        var label = card
+          ? card.querySelector('.deliverable-label')
+          : trigger.querySelector('.deliverable-label');
         if (!img) return;
         openLightbox(
           img.currentSrc || img.src,
