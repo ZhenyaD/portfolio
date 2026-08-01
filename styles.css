@@ -331,6 +331,32 @@ body {
     transform 0.2s ease;
 }
 
+.deliverable-thumb--extended {
+  cursor: default;
+  height: 100%;
+}
+
+.deliverable-thumb--extended:has(.deliverable-thumb-hit:hover) {
+  border-color: var(--color-border-primary);
+}
+
+.deliverable-thumb-hit {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+}
+
+.deliverable-thumb-hit:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: -2px;
+}
+
 .deliverable-thumb:hover {
   border-color: var(--color-border-primary);
 }
@@ -356,55 +382,25 @@ body {
   pointer-events: none;
 }
 
-.deliverable-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: 0.5px solid var(--color-border-tertiary);
-  border-radius: var(--border-radius-md);
-  overflow: hidden;
-  background: var(--color-background-secondary);
+.deliverable-thumb--extended .deliverable-label {
+  padding-bottom: 0;
 }
 
-.deliverable-card .deliverable-thumb--preview {
-  flex: 1 1 auto;
-  min-height: 0;
-  border: 0;
-  border-radius: 0;
-}
-
-.deliverable-card .deliverable-thumb--preview img {
-  height: 100%;
-  object-fit: contain;
-  object-position: top;
-}
-
-.deliverable-card-footer {
-  flex-shrink: 0;
-  background: var(--color-background-secondary);
-  border-top: 0.5px solid var(--color-border-tertiary);
-}
-
-.deliverable-card .deliverable-label {
-  border-top: 0;
-  padding: 6px 8px 0;
-}
-
-.deliverable-card-footer .deliverable-link,
-.deliverable-card-footer .deliverable-link-spacer {
+.deliverable-thumb--extended .deliverable-link,
+.deliverable-thumb--extended .deliverable-link-spacer {
   display: block;
   font-size: 11px;
   line-height: 1.4;
   padding: 4px 8px 6px;
+  background: var(--color-background-secondary);
 }
 
-.deliverable-card-footer .deliverable-link {
+.deliverable-thumb--extended .deliverable-link {
   color: #a0a0a0;
-  background: var(--color-background-secondary);
   text-decoration: none;
 }
 
-.deliverable-card-footer .deliverable-link:hover {
+.deliverable-thumb--extended .deliverable-link:hover {
   color: var(--color-text-secondary);
 }
 

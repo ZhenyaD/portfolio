@@ -87,7 +87,7 @@
     triggers.forEach(function (trigger) {
       trigger.addEventListener('click', function () {
         var img = trigger.querySelector('img');
-        var card = trigger.closest('.deliverable-card');
+        var card = trigger.closest('.deliverable-thumb--extended');
         var label = card
           ? card.querySelector('.deliverable-label')
           : trigger.querySelector('.deliverable-label');
