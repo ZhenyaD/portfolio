@@ -282,6 +282,16 @@ body {
   line-height: 1.6;
 }
 
+.case-block-text a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.case-block-text a:hover {
+  color: var(--color-text-primary);
+}
+
 .case-block-text--spaced {
   margin-bottom: 8px;
 }
