@@ -808,7 +808,7 @@ body.lightbox-open {
   .tool-card--atlas { order: 5; }
   .tool-card--claude-design { order: 6; }
   .tool-card--figma { order: 7; }
-  .tool-card--figjam { order: 8; }
+  .tool-card--obsidian { order: 8; }
   .tool-card--jira { order: 9; }
   .tool-card--confluence { order: 10; }
 
