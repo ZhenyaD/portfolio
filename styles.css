@@ -805,7 +805,7 @@ body.lightbox-open {
   .tool-card--cursor { order: 2; }
   .tool-card--fireflies { order: 3; }
   .tool-card--whispr { order: 4; }
-  .tool-card--excalidraw { order: 5; }
+  .tool-card--figjam { order: 5; }
   .tool-card--claude-design { order: 6; }
   .tool-card--figma { order: 7; }
   .tool-card--obsidian { order: 8; }
