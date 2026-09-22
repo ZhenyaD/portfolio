@@ -401,7 +401,8 @@ body {
   display: block;
 }
 
-.deliverable-label .deliverable-link {
+.deliverable-label .deliverable-link,
+.ai-workflow-caption .deliverable-link {
   display: block;
   color: #a0a0a0;
   text-decoration: underline;
@@ -409,7 +410,8 @@ body {
   pointer-events: auto;
 }
 
-.deliverable-label .deliverable-link:hover {
+.deliverable-label .deliverable-link:hover,
+.ai-workflow-caption .deliverable-link:hover {
   color: var(--color-text-secondary);
 }
 
@@ -719,6 +721,10 @@ body.lightbox-open {
   padding: 6px 10px;
   background: var(--color-background-secondary);
   border-top: 0.5px solid var(--color-border-tertiary);
+}
+
+.ai-workflow-caption .deliverable-label-title {
+  display: block;
 }
 
 .case-block-text--mb {
