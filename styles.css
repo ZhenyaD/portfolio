@@ -402,7 +402,8 @@ body {
 }
 
 .deliverable-label .deliverable-link,
-.ai-workflow-caption .deliverable-link {
+.deliverable-label .deliverable-link:link,
+.deliverable-label .deliverable-link:visited {
   display: block;
   color: #a0a0a0;
   text-decoration: underline;
@@ -410,8 +411,7 @@ body {
   pointer-events: auto;
 }
 
-.deliverable-label .deliverable-link:hover,
-.ai-workflow-caption .deliverable-link:hover {
+.deliverable-label .deliverable-link:hover {
   color: var(--color-text-secondary);
 }
 
@@ -712,18 +712,6 @@ body.lightbox-open {
 
 .ai-workflow-img img {
   width: 100%;
-  display: block;
-}
-
-.ai-workflow-caption {
-  font-size: 11px;
-  color: var(--color-text-tertiary);
-  padding: 6px 10px;
-  background: var(--color-background-secondary);
-  border-top: 0.5px solid var(--color-border-tertiary);
-}
-
-.ai-workflow-caption .deliverable-label-title {
   display: block;
 }
 
